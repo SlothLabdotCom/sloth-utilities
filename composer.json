@@ -1,0 +1,38 @@
+{
+    "name": "slothlabdotcom/sloth-utilities",
+    "description": "Contains necessary utilities for Sloth-Lab S.A.R.L projects",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Slothlabdotcom\\SlothUtilities\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sloth-Lab S.A.R.L",
+            "email": "contact@sloth-lab.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Slothlabdotcom\\SlothUtilities\\SlothUtilitiesServiceProvider"
+            ]
+        }
+    }
+}
