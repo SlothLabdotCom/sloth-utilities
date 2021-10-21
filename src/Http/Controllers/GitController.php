@@ -10,6 +10,6 @@ class GitController extends Controller
         {
             return view('SlothUtilities::git.index');
         }
-        return redirect('/');
+        return abort('404');
     }
 }
