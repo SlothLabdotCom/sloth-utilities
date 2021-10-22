@@ -14,6 +14,7 @@ composer require slothlabdotcom/sloth-utilities
  * [x] Revive Switch
  * [x] Git Commands
  * [x] Artisan Commands
+ * [ ] Auto Generate Password
  * [ ] License Check
 
 
