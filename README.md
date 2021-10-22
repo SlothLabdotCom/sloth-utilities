@@ -1,7 +1,12 @@
 <p align="center"><img src="https://sloth-lab.com/ss-02.png" width="300"></p>
 
 
-## To Start
+## To Install
+Run the following command:
+
+```
+composer require slothlabdotcom/sloth-utilities
+```
 
 # Roadmap
 
