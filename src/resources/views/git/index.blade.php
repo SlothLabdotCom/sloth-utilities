@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sloth-Input</title>
+    <meta name="robots" content="noindex" />
+    <title>Sloth Utilities</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
@@ -14,6 +15,43 @@
         <div class="container-fluid p-5">
             <div class="text-center mt-5 mb-5">
                 <img src="https://sloth-lab.com/ss-02.png" style="width:180px" />
+            </div>
+
+            <div class="row text-center mb-2">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <a href="{{ route('git.pull', '123456') }}"><button type="button" class="btn btn-dark btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Git pull, Composer install and Artisan migrate">Git Pull</button></a>
+                </div>
+                <div class="col-md-5">
+                    <a href="{{ route('git.migrate', '123456') }}"><button type="button" class="btn btn-outline-dark btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Migrate fresh and Seed">Migrate fresh</button></a>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row text-center mb-2">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <a href="{{ route('git.seed', '123456') }}"><button type="button" class="btn btn-outline-danger btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Seed database without migration">Seed Database</button></a>
+                </div>
+                <div class="col-md-5">
+                    <a href="{{ route('git.autoload', '123456') }}"><button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Dump Autoload">Composer Autoload</button></a>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row text-center mb-2">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <a href="{{ route('git.optimize', '123456') }}"><button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Optimize the project">Clear Cache</button></a>
+                </div>
+                <div class="col-md-5">
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row text-center mt-5">
+                <div class="col-md-12"><p>Copyright &copy; {{ date('Y') }} Sloth Utilities</p><p>Proudly crafted by <a href="https://sloth-lab.com" target="_blank">Sloth-Lab S.A.R.L</a></p></div>
             </div>
 
         </div>

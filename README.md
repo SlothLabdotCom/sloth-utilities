@@ -7,8 +7,9 @@
 
  * [x] Kill Switch
  * [x] Revive Switch
- * [ ] Git Commands
- * [ ] Artisan Commands
+ * [x] Git Commands
+ * [x] Artisan Commands
+ * [ ] License Check
 
 
 

