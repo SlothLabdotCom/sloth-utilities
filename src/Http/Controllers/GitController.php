@@ -4,7 +4,12 @@ namespace Slothlabdotcom\SlothUtilities\Http\Controllers;
 
 class GitController extends Controller
 {
-    private $password = '123456';
+    private $password;
+
+    public function __construct()
+    {
+        $this->password = config('ziplock.token');
+    }
 
     public function index($password)
     {

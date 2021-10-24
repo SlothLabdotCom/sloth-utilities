@@ -1,25 +1,40 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
+
 Route::get('/SlothLab/Kill/{password}', function($password) {
-    if($password == "123456") {
-        copy(base_path("routes/web.php"), base_path("routes/sloth.php"));
+    if($password == config('ziplock.token')) {
+        Artisan::call('down --secret="' . config('ziplock.token') . '" --render="SlothUtilities::errors.404"');
+        copy(base_path("routes/web.php"), base_path("config/lock.php"));
         $content = " ";
-        if(file_put_contents(base_path('routes/web.php'), $content)) {
-            return "Killed the project successfully";
-        }
-        else {
+        if (file_put_contents(base_path('routes/web.php'), $content)) {
+            return "Application is killed, use your password to navigate Example http://localhost:8000/slothadmin";
+        } else {
             return "Somthing went wrong";
         }
+    }
+    else {
+        return abort('404');
     }
 });
 
 Route::get('/SlothLab/Revive/{password}', function ($password) {
-    if ($password == "123456") {
-        if (copy(base_path("routes/sloth.php"), base_path("routes/web.php"))){
-            return "Revived the project successfully";
+    if ($password == config('ziplock.token')) {
+        Artisan::call('up');
+        if(!file_exists(base_path("routes/lock.php")))
+        {
+            return "Oops! backup routes doesn't exist!";
+        }
+        if(copy(base_path("config/lock.php"), base_path("routes/web.php"))) {
+            unlink(base_path("config/lock.php"));
+            return "Application is up!";
         } else {
             return "Somthing went wrong";
         }
+
+    }
+    else {
+        return abort('404');
     }
 });
 
