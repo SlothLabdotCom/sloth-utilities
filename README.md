@@ -69,7 +69,7 @@ http://localhost:8000/SlothLab/Revive/slothadmin
 ### Utilities
 to access your utilities you just have to visit 
 ```
-http://localhost:8000/SlothLab/git/slothadmin
+http://localhost:8000/SlothLab/utilities/slothadmin
 ```
 there you can hover on each button to see what it does exactly
 
