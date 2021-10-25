@@ -74,14 +74,10 @@ http://localhost:8000/SlothLab/git/slothadmin
 there you can hover on each button to see what it does exactly
 
 
-# Roadmap
+# Screenshots
 
- * [x] Kill Switch
- * [x] Revive Switch
- * [x] Git Commands
- * [x] Artisan Commands
- * [ ] License Check
-
+<p align="center"><img src="https://sloth-lab.com/Screenshot_3.png" width="300"></p>
+<p align="center"><img src="https://sloth-lab.com/Screenshot_2.png" width="300"></p>
 
 
 
