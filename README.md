@@ -76,8 +76,8 @@ there you can hover on each button to see what it does exactly
 
 # Screenshots
 
-<p align="center"><img src="https://sloth-lab.com/Screenshot_3.png" width="300"></p>
-<p align="center"><img src="https://sloth-lab.com/Screenshot_2.png" width="300"></p>
+<p align="center"><img src="https://sloth-lab.com/Screenshot_3.png" width="700"></p>
+<p align="center"><img src="https://sloth-lab.com/Screenshot_2.png" width="700"></p>
 
 
 
