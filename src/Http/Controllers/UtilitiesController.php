@@ -2,7 +2,7 @@
 
 namespace Slothlabdotcom\SlothUtilities\Http\Controllers;
 
-class GitController extends Controller
+class UtilitiesController extends Controller
 {
     private $password;
 
@@ -15,7 +15,7 @@ class GitController extends Controller
     {
         if($password == $this->password)
         {
-            return view('SlothUtilities::git.index');
+            return view('SlothUtilities::utilities.index');
         }
         return abort('404');
     }
@@ -34,7 +34,7 @@ class GitController extends Controller
             foreach ($data as $element) {
                 $result .= "<pre style='font-size:15px;'>" . $this->convert($element) . "</pre>";
             }
-            $result .= "<a href='". route('git.index', $this->password) ."'><button>Go Back</button></a>";
+            $result .= "<a href='". route('utilities.index', $this->password) ."'><button>Go Back</button></a>";
             echo $result;
             die();
         }
@@ -53,7 +53,7 @@ class GitController extends Controller
             foreach ($data as $element) {
                 $result .= "<pre style='font-size:15px;'>" . $this->convert($element) . "</pre>";
             }
-            $result .= "<a href='" . route('git.index', $this->password) . "'><button>Go Back</button></a>";
+            $result .= "<a href='" . route('utilities.index', $this->password) . "'><button>Go Back</button></a>";
             echo $result;
             die();
         }
@@ -72,7 +72,7 @@ class GitController extends Controller
             foreach($data as $element) {
                 $result .= "<pre style='font-size:15px;'>" . $this->convert($element) . "</pre>";
             }
-            $result .= "<a href='" . route('git.index', $this->password) . "'><button>Go Back</button></a>";
+            $result .= "<a href='" . route('utilities.index', $this->password) . "'><button>Go Back</button></a>";
             echo $result;
             die();
         }
@@ -91,7 +91,7 @@ class GitController extends Controller
             foreach ($data as $element) {
                 $result .= "<pre style='font-size:15px;'>" . $this->convert($element) . "</pre>";
             }
-            $result .= "<a href='" . route('git.index', $this->password) . "'><button>Go Back</button></a>";
+            $result .= "<a href='" . route('utilities.index', $this->password) . "'><button>Go Back</button></a>";
             echo $result;
             die();
         }
@@ -110,7 +110,7 @@ class GitController extends Controller
             foreach ($data as $element) {
                 $result .= "<pre style='font-size:15px;'>" . $this->convert($element) . "</pre>";
             }
-            $result .= "<a href='" . route('git.index', $this->password) . "'><button>Go Back</button></a>";
+            $result .= "<a href='" . route('utilities.index', $this->password) . "'><button>Go Back</button></a>";
             echo $result;
             die();
         }

@@ -13,7 +13,7 @@ class SlothUtilitiesServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadRoutesFrom(__DIR__ . '/routes/switch.php');
-        $this->loadRoutesFrom(__DIR__ . '/routes/git.php');
+        $this->loadRoutesFrom(__DIR__ . '/routes/utilities.php');
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'SlothUtilities');
 
         if ($this->app->runningInConsole()) {
@@ -27,9 +27,7 @@ class SlothUtilitiesServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/resources/assets' => public_path('sloth-assets'),
             ], 'assets');
-
         }
-
     }
 
     /**
@@ -38,6 +36,5 @@ class SlothUtilitiesServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/config/config.php', 'ziplock');
-
     }
 }

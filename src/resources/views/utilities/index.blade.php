@@ -20,21 +20,10 @@
             <div class="row text-center mb-2">
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
-                    <a href="{{ route('git.pull', '123456') }}"><button type="button" class="btn btn-dark btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Git pull, Composer install and Artisan migrate">Git Pull</button></a>
+                    <a href="{{ route('utilities.pull', config('ziplock.token')) }}"><button type="button" class="btn btn-dark btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Git pull, Composer install and Artisan migrate">Git Pull</button></a>
                 </div>
                 <div class="col-md-5">
-                    <a href="{{ route('git.migrate', '123456') }}"><button type="button" class="btn btn-outline-dark btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Migrate fresh and Seed">Migrate fresh</button></a>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-            <div class="row text-center mb-2">
-                <div class="col-md-1"></div>
-                <div class="col-md-5">
-                    <a href="{{ route('git.seed', '123456') }}"><button type="button" class="btn btn-outline-danger btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Seed database without migration">Seed Database</button></a>
-                </div>
-                <div class="col-md-5">
-                    <a href="{{ route('git.autoload', '123456') }}"><button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Dump Autoload">Composer Autoload</button></a>
+                    <a href="{{ route('utilities.migrate', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-dark btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Migrate fresh and Seed">Migrate fresh</button></a>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -42,10 +31,25 @@
             <div class="row text-center mb-2">
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
-                    <a href="{{ route('git.optimize', '123456') }}"><button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Optimize the project">Clear Cache</button></a>
+                    <a href="{{ route('utilities.seed', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-danger btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Seed database without migration">Seed Database</button></a>
                 </div>
                 <div class="col-md-5">
+                    <a href="{{ route('utilities.autoload', config('ziplock.token')) }}"><button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Dump Autoload">Composer Autoload</button></a>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
 
+            <div class="row text-center mb-2">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <a href="{{ route('utilities.optimize', config('ziplock.token')) }}"><button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Optimize the project">Clear Cache</button></a>
+                </div>
+                <div class="col-md-5">
+                    @if(file_exists(base_path("storage/lock.dat")))
+                        <a href="{{ route('switch.revive', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-success btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Revives the project">Revive</button></a>
+                    @else
+                        <a href="{{ route('switch.kill', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-secondary btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Kills the project">Kill</button></a>
+                    @endif
                 </div>
                 <div class="col-md-1"></div>
             </div>
