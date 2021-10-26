@@ -28,6 +28,7 @@ class UtilitiesController extends Controller
             $data = [];
             $data[] = 'Username => ' . shell_exec('whoami');
             $data[] = 'Path => ' . getcwd();
+            $data[] = 'Git Branch: </br>' . shell_exec('git branch');
             $data[] = 'Git pull: </br>' . shell_exec('git pull -f');
             $data[] = 'Composer:  </br>' . shell_exec('composer install --no-interaction --no-dev --prefer-dist');
             $data[] = 'Migrate:  </br>' . shell_exec('php artisan migrate --force');
