@@ -28,9 +28,9 @@ class UtilitiesController extends Controller
             $data = [];
             $data[] = 'Username => ' . shell_exec('whoami');
             $data[] = 'Path => ' . getcwd();
-            $data[] = 'Git pull (if null then successful) => ' . shell_exec('git pull');
-            $data[] = 'Composer => </br>' . shell_exec('composer install --no-interaction --no-dev --prefer-dist');
-            $data[] = 'Migrate => </br>' . shell_exec('php artisan migrate --force');
+            $data[] = 'Git pull: </br>' . shell_exec('git pull -f');
+            $data[] = 'Composer:  </br>' . shell_exec('composer install --no-interaction --no-dev --prefer-dist');
+            $data[] = 'Migrate:  </br>' . shell_exec('php artisan migrate --force');
             foreach ($data as $element) {
                 $result .= "<pre style='font-size:15px;'>" . $this->convert($element) . "</pre>";
             }
