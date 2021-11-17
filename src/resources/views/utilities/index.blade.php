@@ -20,21 +20,10 @@
             <div class="row text-center mb-2">
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
-                    <a href="{{ route('utilities.pull', config('ziplock.token')) }}"><button type="button" class="btn btn-dark btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Git pull, Composer install and Artisan migrate">Git Pull</button></a>
+                    <a href="{{ route('utilities.seed', config('ziplock.token')) }}"><button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Seed database without migration">Seed Database</button></a>
                 </div>
                 <div class="col-md-5">
                     <a href="{{ route('utilities.migrate', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-dark btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Migrate fresh and Seed">Migrate fresh</button></a>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-            <div class="row text-center mb-2">
-                <div class="col-md-1"></div>
-                <div class="col-md-5">
-                    <a href="{{ route('utilities.seed', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-danger btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Seed database without migration">Seed Database</button></a>
-                </div>
-                <div class="col-md-5">
-                    <a href="{{ route('utilities.autoload', config('ziplock.token')) }}"><button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Dump Autoload">Composer Autoload</button></a>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -46,10 +35,21 @@
                 </div>
                 <div class="col-md-5">
                     @if(file_exists(base_path("storage/lock.dat")))
-                        <a href="{{ route('switch.revive', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-success btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Revives the project">Revive</button></a>
+                        <a href="{{ route('switch.revive', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-success btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Revives the project">Revive Project</button></a>
                     @else
-                        <a href="{{ route('switch.kill', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-secondary btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Kills the project">Kill</button></a>
+                        <a href="{{ route('switch.kill', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-secondary btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Kills the project">Kill Project</button></a>
                     @endif
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row text-center mb-2">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <a href="{{ route('utilities.check', config('ziplock.token')) }}"><button type="button" class="btn btn-info btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Check for malicious PHP extensions">Security Check</button></a>
+                </div>
+                <div class="col-md-5">
+                    <a href="{{ route('utilities.choice', config('ziplock.token')) }}"><button type="button" class="btn btn-outline-info btn-lg btn-block" data-toggle="tooltip" data-placement="bottom" title="Check for malicious PHP extensions">Malware Scan</button></a>
                 </div>
                 <div class="col-md-1"></div>
             </div>

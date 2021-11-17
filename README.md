@@ -9,11 +9,11 @@ It's a package meant for freelancers that have issues with scammers and none pay
 
 - Kill Switch that "kills the project" by putting it in maintenance mode and hiding tthe routes
 - Reviving the project
-- Project update with git pull and composer install and migration
 - Clear cache and optimize the app
-- Composer dump-autoload
 - Launch seed (or maybe you want to see an admin user ;) )
 - Refresh migration
+- Security Check
+- Malware Scanner
 - Many more to come...
 
 ## Getting Started
